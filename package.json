@@ -1,0 +1,44 @@
+{
+  "name": "infinite-terrain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "jquery": "^2.2.0",
+    "stats.js": "0.0.14-master",
+    "three": "^0.76.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-download": "0.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "http": "0.0.0",
+    "st": "^1.1.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "dev": "node_modules/.bin/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdero/infinite-terrain.git"
+  },
+  "keywords": [
+    "terrain",
+    "game",
+    "browser",
+    "es6",
+    "threejs",
+    "webgl"
+  ],
+  "author": "Brandon DeRosier",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bdero/infinite-terrain/issues"
+  },
+  "homepage": "https://github.com/bdero/infinite-terrain#readme"
+}
