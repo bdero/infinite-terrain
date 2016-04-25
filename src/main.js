@@ -1,22 +1,37 @@
 var stats = require('./utils/stats');
 
-var container = document.createElement('div');
-document.body.appendChild(container);
+var renderer;
 
-var renderer = new THREE.WebGLRenderer({antialias: true});
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.domElement.style.position = "relative";
+function initialize() {
+  var container = document.createElement('div');
+  document.body.appendChild(container);
 
-container.appendChild(renderer.domElement);
+  renderer = new THREE.WebGLRenderer({antialias: true});
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.domElement.style.position = "relative";
 
-renderer.gammaInput = true
-renderer.gammaOutput = true
+  container.appendChild(renderer.domElement);
 
-update();
+  renderer.gammaInput = true
+  renderer.gammaOutput = true
+
+  window.addEventListener('resize', onWindowResize, false);
+
+  update();
+}
 
 function update () {
   requestAnimationFrame(update);
 
   stats.update();
 }
+
+function onWindowResize() {
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  console.log(`Resizing renderer to ${w} x ${h}.`)
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+initialize()
