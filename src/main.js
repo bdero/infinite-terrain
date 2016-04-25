@@ -1,4 +1,5 @@
-var stats = require('./utils/stats');
+var stats = require('./utils/stats'),
+    _ = require('lodash');
 
 var renderer;
 
@@ -27,10 +28,14 @@ function update () {
   stats.update();
 }
 
+var resizeMessage = _.throttle(
+  () => console.log(
+    `Renderer resized to ${window.innerWidth} x ${window.innerHeight}.`
+  ), 500
+);
 function onWindowResize() {
-  var w = window.innerWidth;
-  var h = window.innerHeight;
-  console.log(`Resizing renderer to ${w} x ${h}.`)
+  resizeMessage();
+
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
