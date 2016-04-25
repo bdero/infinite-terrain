@@ -1,20 +1,8 @@
 let stats = require('./utils/stats'),
-  _ = require('lodash');
+  _ = require('lodash'),
+  renderer = require('./engine/renderer');
 
 function initialize() {
-  let container = document.createElement('div');
-  document.body.appendChild(container);
-
-  let renderer = new THREE.WebGLRenderer({antialias: true});
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.domElement.style.position = "relative";
-
-  container.appendChild(renderer.domElement);
-
-  renderer.gammaInput = true
-  renderer.gammaOutput = true
-
   let resizeMessage = _.throttle(
     () => console.log(
       `Renderer resized to ${window.innerWidth} x ${window.innerHeight}.`
