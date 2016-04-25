@@ -12,3 +12,11 @@ container.appendChild(renderer.domElement);
 
 renderer.gammaInput = true
 renderer.gammaOutput = true
+
+update();
+
+function update () {
+  requestAnimationFrame(update);
+
+  stats.update();
+}

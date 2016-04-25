@@ -9,5 +9,6 @@ $('body').append(stats.domElement);
 
 module.exports = {
   begin: stats.begin,
-  end: stats.end
+  end: stats.end,
+  update: stats.update
 };
