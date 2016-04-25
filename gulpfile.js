@@ -28,7 +28,6 @@ gulp.task('es6', function() {
     .pipe(gulp.dest("build"));
 });
 
-
 gulp.task('default', ['browserify'], function(done) {
   http.createServer(
     st({ index: 'index.html', cache: false, path: __dirname })
