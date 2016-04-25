@@ -3,7 +3,8 @@
 A simple infinite terrain implementation, rendering powered by
 [Three.js](http://threejs.org/).
 
-This includes a gulp pipeline which supports ES6 (via Babel) and automatically.
+This includes a gulp pipeline which supports ES6 (via Babel) along with a
+watcher that automatically rebuilds upon modifying any files in `src/`.
 
 
 ## To use
