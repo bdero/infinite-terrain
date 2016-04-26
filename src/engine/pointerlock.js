@@ -18,7 +18,7 @@ let lockEnabled = false;
         console.debug('Pointer lock controls enabled.')
       } else {
         lockEnabled = false;
-        console.debug('Pointer lock controls lost!');
+        console.debug('Pointer lock controls lost.');
       }
     };
     var pointerlockerror = function ( event ) {
@@ -83,7 +83,7 @@ function PointerLockControls ( camera ) {
 
 	document.addEventListener( 'mousemove', onMouseMove, false );
 
-	this.enabled = false;
+	this.enabled = true;
 
 	this.getObject = function () {
 
