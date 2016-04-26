@@ -1,7 +1,7 @@
-var Stats = require('stats.js'),
+const Stats = require('stats.js'),
   $ = require('jquery');
 
-var stats = new Stats();
+const stats = new Stats();
 
 stats.setMode(0);
 
