@@ -1,9 +1,9 @@
-let stats = require('./utils/stats'),
+const stats = require('./utils/stats'),
   _ = require('lodash'),
   renderer = require('./engine/renderer');
 
 function initialize() {
-  let resizeMessage = _.throttle(
+  const resizeMessage = _.throttle(
     () => console.log(
       `Renderer resized to ${window.innerWidth} x ${window.innerHeight}.`
     ), 500
