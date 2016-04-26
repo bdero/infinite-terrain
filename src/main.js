@@ -30,8 +30,13 @@ function initialize() {
   update();
 }
 
+let previousTime = performance.now();
 function update () {
   requestAnimationFrame(update);
+
+  const time = performance.now();
+  const delta = (time - previousTime)/1000;
+  previousTime = time;
 
   renderer.render(scene, camera);
 
