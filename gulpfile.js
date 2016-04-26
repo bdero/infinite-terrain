@@ -34,5 +34,5 @@ gulp.task('default', ['browserify'], function(done) {
   ).listen(8080, done);
   console.log('Now listening: http://localhost:8080 ....');
   livereload.listen();
-  gulp.watch('src/*', ['browserify']);
+  gulp.watch('src/**', ['browserify']);
 });
