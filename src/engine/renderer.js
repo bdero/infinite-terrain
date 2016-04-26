@@ -1,5 +1,4 @@
-let container = document.createElement('div');
-document.body.appendChild(container);
+const container = require('./container');
 
 let renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setPixelRatio(window.devicePixelRatio);
